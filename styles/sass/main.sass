@@ -1,0 +1,771 @@
+@use 'sass:math'
+@use 'sass:color'
+
+@import config
+@import colors
+@import 'blocks/**/*'
+
+.container-fluid
+	padding: 0
+
+.roboto
+	font-family: $userfont
+
+.mr-3
+	margin-right: 30px
+
+.mb-7
+	margin-bottom: 70px
+
+.underline
+	display: inline-block
+	position: relative
+	padding-bottom: 5px
+	&:after
+		content: ""
+		opacity: 1
+		width: 100%
+		height: 2px
+		background-color: rgba($orange, .9)
+		position: absolute
+		top: 100%
+		left: 0
+		z-index: 1
+
+.shadow
+	box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important
+
+.center
+	text-align: center
+
+.flex
+	display: flex
+	flex-direction: space-between
+	justify-content: center
+
+.header
+	width: 100%
+	background-color: rgba(255, 255, 255, 0.95)
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	z-index: 1000
+
+	.header-inner
+		padding: 20px 40px
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+
+.modal-open
+	overflow-x: scroll
+	overflow-y: scroll
+	padding-right: 17px
+	.header-inner
+		margin-right: 17px
+
+.logo a
+	display: block
+	opacity: 1
+
+	&:hover
+		opacity: 0.9
+
+	img
+		max-width: 240px
+
+._nav
+	font-size: 14px
+	text-transform: uppercase
+
+.nav-link
+	display: inline-block
+	vertical-align: top
+	margin: 0 20px
+	padding: 10px 0
+	color: #000
+	text-decoration: none
+	transition: color .2s linear
+	position: relative
+	font-weight: 500
+
+	&:hover
+		color: $orange
+
+	&:after
+		content: ""
+		opacity: 0
+		width: 100%
+		height: 2px
+		background-color: $orange
+		position: absolute
+		top: 100%
+		left: 0
+		z-index: 1
+		transition: opacity .2s linear
+
+	&:hover:after
+		display: block
+		opacity: 1
+
+.active
+	color: $orange
+	opacity: 1
+	&:after
+		content: ""
+		opacity: 1
+		width: 100%
+		height: 2px
+		background-color: $orange
+		position: absolute
+		top: 100%
+		left: 0
+		z-index: 1
+
+.feedback-block
+	display: inline-block
+	vertical-align: center
+	padding: 0
+	text-align: right
+
+	.phone
+		text-decoration: none
+		font-size: 20px
+		font-weight: 700
+		float: left
+		margin: 5px 35px 0 0
+
+.call-back
+	font-size: 16px
+	padding: 9px 15px 7px
+	text-decoration: none
+	text-transform: uppercase
+	border-radius: 4px
+	border: none
+	background-color: $orange
+	color: #fff
+	transition: .3s
+
+	&:hover
+		background-color: $accent
+
+/* Section Home */
+
+.home
+	display: flex
+	flex-direction: column
+	justify-content: center
+	width: 100%
+	height: 95vh
+	background-image: url(../images/src/bg-2.jpg)
+	background-size: cover
+	background-position: center
+
+.overlay
+	position: relative
+	z-index: 1
+	&:after
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: -1
+		background: #000
+		opacity: .05
+
+.home-inner
+	width: 100%
+	max-width: 880px
+
+	.home-title
+		font-size: 50px
+		text-transform: uppercase
+
+	.home-subtitle
+		margin-top: 40px
+		font-size: 30px
+		color: #000
+
+	.action-block
+		padding: 30px 20px
+		background: rgba(#fff, .5)
+		border-radius: 10px
+		margin-top: 60px
+		width: 55%
+		text-align: center
+		transition: .5s
+
+		.btn-big
+			margin: 15px 0 10px
+			font-size: 18px
+			padding: 17px 35px
+			border-radius: 7px
+
+/* Section About Us*/
+
+.section-about
+	width: 100%
+	height: auto
+	background: linear-gradient(180deg, #f3f3f3, #fff)
+	padding: 0 0 50px 0
+
+
+.about-us-block
+	display: flex
+	flex-direction: column
+	font-size: .9rem
+	margin-top: -50px
+	border-radius: 10px
+	width: 30%
+	min-height: 300px
+	background: #fff
+	z-index: 1
+	text-align: center
+	padding: 20px
+	box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important
+
+	img
+		width: 25%
+		
+.about-block
+	display: flex
+	justify-content: space-between
+	align-items: center
+	margin-bottom: 20px
+
+
+.about-image, .about-content
+	width: 100%
+	height: auto
+	vertical-align: middle
+	padding: 10px
+
+.about-text
+	list-style-type: none
+	font-size: 18px
+	text-align: center
+
+	span
+		font-weight: 600
+		color: red
+		font-size: 20px
+
+.worths, .principles
+	width: 100%
+	height: auto
+
+	.worth-item, .principle-item
+		padding: 20px
+		width: 24%
+		min-height: 200px
+		transition: 0.3s
+		background: #fff
+		text-align: center
+		border-radius: 10px
+		box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important
+
+		.item-content-header
+			width: auto
+			color: $orange
+			padding-bottom: 0
+
+		.item-content
+			display: flex
+			justify-content: space-between
+			align-items: center
+		
+		.item-text
+			padding: 20px
+			width: 100%
+
+		.item-number
+			font-family: $userfont
+			text-align: center
+			width: 30%
+			font-size: 100px
+			opacity: .3
+
+	.principles-title
+		text-align: center
+		width: 30%
+
+		img
+			margin-bottom: 8px
+
+	.principle-item
+		width: 32.5%
+
+.about-form
+	margin-top: 50px
+	height: 40vh
+	background-color: #f5f5f5
+
+.about-form-inner
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding: 10px
+
+.block-1, .help-form
+	width: 49%
+	height: auto
+	font-size: 20px
+	display: block
+
+	p
+		font-size: 16px
+		font-weight: 700
+	b
+		text-transform: uppercase
+
+	ul
+		list-style-type: none
+		margin-bottom: 30px
+		padding-left: 0
+	
+		i
+			padding: 15px 20px 15px 0
+
+		li
+			font-size: 24px
+
+.help-form
+	text-align: center
+
+	input, textarea
+		width: 50%
+		border: none
+		margin-bottom: 10px
+		font-size: 16px
+		padding: 10px 15px
+		border: 1px solid #dedede
+
+	textarea
+		height: 100px
+		resize: none
+
+	::-webkit-input-placeholder
+		color: #aaa
+		font-size: 14px
+
+p.footnote
+	font-size: 11px
+	font-weight: normal
+
+	.fa-square-check
+		color: grey
+		margin-right: 5px
+
+
+/* Section Rent */
+
+.rent
+	background: linear-gradient(180deg, #fff, #f3f3f3)
+	padding: 50px 0
+
+.rent-item
+	padding: 20px 0
+	display: flex
+	height: auto
+	background: #fff
+	margin-bottom: 50px
+	box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important
+
+	&:last-child
+		margin-bottom: 0
+
+.rent-item-image
+	text-align: center
+	width: 50%
+	height: 30em
+	margin-right: 20px
+	text-align: left
+	padding-left: 20px
+
+	img
+		width: auto
+		height: 100%
+
+.rent-item-description
+	width: 50%
+
+.rent-item-title
+	text-align: center
+	color: $accent
+	font-weight: 700
+	margin: 30px 0
+
+.montserrat-font
+	font-family: $montserrat
+
+.rent-item-types
+	margin-bottom: 20px
+	p
+		margin: 0
+
+		span
+			color: $accent
+			font-weight: bold
+
+		&:first-child
+			margin-bottom: 5px
+
+.rent-item-list
+	ul
+		list-style-type: none
+		padding-left: 0
+		li
+			padding: 5px 0
+		i
+			color: $accent
+			margin-right: 15px
+			padding-top: 5px
+
+.rent-item-footer
+	text-align: center
+	.call-back
+		padding: 10px 40px
+
+
+
+/* Section Sale */
+
+.sale
+	background: #f3f3f3
+
+.sale-header, .rent-header, .rent-battery-header
+	text-align: center
+	margin: 20px auto
+
+.sale-header
+	margin: 0 auto
+	padding-top: 30px
+
+	h2
+		margin-bottom: 20px
+
+.sale-content
+	display: flex
+	justify-content: space-between
+	padding-bottom: 10px
+
+	.sale-item
+		width: 25%
+		height: auto
+		position: relative
+		border: 1px solid #f3f3f3
+
+		.sale-item-image
+			width: 100%
+			z-index: 1
+			opacity: 1
+			transition: opacity .5s
+			padding: 10px
+			text-align: center
+			img
+				width: 80%
+
+		.sale-item-description
+			text-align: center
+			padding: 30px 20px
+			background: rgba(#fff, .1)	
+			box-sizing: border-box
+			position: absolute
+			left: 0
+			top: 0
+			width: 100%
+			height: 100%
+			opacity: 0
+			transition: opacity .5s
+
+			li
+				margin-left: 50px
+				text-align: left
+			a
+				&:hover
+					color: #fff
+
+		&:hover
+			border: 1px solid #ececec
+
+			.sale-item-image
+				z-index: 0
+				opacity: .1
+
+			.sale-item-description
+				opacity: 1
+				top: 0
+
+		.sale-item-title
+			font-weight: 700
+			margin: 20px 0
+			color: $accent
+
+			b
+				color: green
+				font-size: 24px
+
+		.call-back
+			margin-top: 30px
+
+
+/* Section Rent Battery */
+
+.rent-battery
+	padding: 50px 50px 0 50px
+	width: 100%
+	height: auto
+	background: linear-gradient(180deg, #f3f3f3, #f1f1f1)
+	position: relative
+
+	.rent-battery-header
+		text-align: center
+
+	.rent-battery-subheader
+		padding: 0 400px
+		text-align: center
+
+		.five-advantages-header
+			color: $accent
+
+	.rent-battery-content, .five-advantages
+		display: flex
+		justify-content: space-between
+		align-items: stretch
+
+		.advantage
+			width: 19%
+			padding: 30px 15px
+			font-size: 20px
+			text-align: center
+			font-weight: 600
+			display: flex
+			align-items: center
+			box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important
+
+			p
+				font-size: 50px
+				padding: 20px 10px 0 0
+				color: rgba($accent, .5)
+
+	.rent-battery-item
+		width: 50%
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 10px 30px
+		margin-bottom: 30px
+		background: #fff
+		// box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important
+
+	.rent-battery-item-image
+		width: 50%
+		float: left
+		padding: 10px
+
+		img
+			width: 80%
+
+	.rent-battery-item-description
+		width: 50%
+
+		ul
+			list-style-type: none
+			padding-left: 0
+			li
+				font-size: 14px
+
+			i
+				color: $accent
+				margin-right: 15px
+				padding-top: 5px
+
+		.rent-battery-item-title
+			font-size: 24px
+			margin-bottom: 10px
+			color: $accent
+
+		.call-back
+			margin-top: 40px
+
+
+/* Section Service */
+
+.service
+	height: 80vh
+	background: linear-gradient(180deg, #f1f1f1, #fff)
+	text-align: center
+	padding-top: 100px
+
+.service-header
+	span
+		font-weight: 700
+		color: $orange
+
+.service-content
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+.service-items
+	text-align-last: left
+	list-style-type: none
+
+.service-item-block
+	display: flex
+	justify-content: column
+	align-items: center
+
+	img
+		width: 10%
+		padding: 8px
+	p
+		padding-left: 20px
+		font-size: 1rem
+
+
+/* Section Contact */
+
+.contacts-wrapper
+	height: 500px
+
+.employee
+	width: 33%
+	padding: 20px
+
+	img
+		width: 90%
+
+.employee-name
+	p
+		margin-bottom: 0
+		font-weight: 500
+		// border: 1px solid green
+.employee-tel
+	font-weight: 500
+	color: $accent
+
+.employee-social
+	margin-bottom: 0
+
+	.telegram, .whatsapp, .mail
+		padding: 0 5px
+
+	.fa-telegram
+		color: #229ED9
+		font-size: 30px
+
+	.fa-square-whatsapp
+		color: #25d366
+		font-size: 30px
+
+	.fa-envelope		
+		color: $accent
+		font-size: 30px
+
+.contacts
+	padding-bottom: 30px
+/* Contact-Form */
+
+.modal-content
+	background-color: #eee
+	border-radius: 10px
+
+.modal-header
+	padding-left: 20px
+	background-color: #ccc
+
+.contact-form
+	padding: 0 20px 20px 20px
+
+.form-group
+	margin: 20px 0
+
+	label
+		padding-top: 20px
+		padding-bottom: 7px
+
+	input
+		border: 2px solid #fff
+
+		&:focus
+			border: 2px solid #ffb300
+			box-shadow: none
+
+.form-footer
+	text-align: right
+	padding-top: 20px
+
+
+/* Modal Sass */
+
+.modal-overlay, .callback-overlay
+	position: fixed
+	top: 0
+	right: 0
+	left: 0
+	bottom: 0
+	background-color: rgba(0, 0, 0, .5)
+	display: none
+	z-index: 10000
+
+
+.modal-window, .callback-window
+	width: 800px
+	height: auto
+	border-radius: 10px
+	margin: 15% auto
+	background-color: rgba(255, 255, 255, .9)
+	transition: 2s
+
+.callback-window
+	width: 400px
+	text-align: center
+
+.modal-body-header, .callback-header
+	padding: 5px 15px
+	display: flex
+	justify-content: space-between
+	align-items: center
+	color: #000
+
+	.modal-title
+		font-size: 1.5rem
+		font-weight: 500
+		position: relative
+
+		&:after
+			content: ""
+			opacity: 1
+			width: 100%
+			height: 2px
+			background-color: $orange
+			position: absolute
+			top: 100%
+			left: 0
+
+	.modal-close, .callback-close
+		cursor: pointer
+		font-size: 1.9rem
+		color: $orange
+
+.modal-body
+	padding: 10px 20px
+
+	input
+		width: 90%
+		padding: 5px 10px
+
+.modal-body-content
+	color: #000
+	padding: 20px
+
+	p span
+		color: $orange
+		font-weight: 700
+
+@import media
