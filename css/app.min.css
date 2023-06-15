@@ -530,7 +530,7 @@ body {
   color: #ffd600;
 }
 .cyan {
-  color: #019ba6;
+  color: #d4000b;
 }
 .heading {
   font-size: 27px;
@@ -810,14 +810,14 @@ body {
 }
 .home-inner .action-block .get-more-btn-blue:hover,
 .home-inner .action-block .get-more-btn:hover {
-  background: #dc4916;
+  background: #a7030b;
 }
 .home-inner .action-block .get-more-btn-blue {
   background: #d4000b;
   border: 1px solid #d4000b;
 }
 .home-inner .action-block .get-more-btn-blue:hover {
-  background: #013c41;
+  background: #a7030b;
 }
 .section-about {
   background: -webkit-gradient(
@@ -1040,7 +1040,7 @@ body {
   transition: 0.3s;
 }
 .help-form .send-request:hover {
-  background: #dc4916;
+  background: #a7030b;
 }
 p.footnote {
   font-size: 11px;
@@ -1186,7 +1186,10 @@ p.footnote .fa-square-check {
   z-index: 1;
 }
 .sale-content .sale-item .sale-item-image img {
-  width: 80%;
+  max-width: 320px;
+  max-height: 320px;
+  overflow: hidden;
+  aspect-ratio: 1-1;
 }
 .sale-content .sale-item .sale-item-description {
   background: hsla(0, 0%, 100%, 0.1);
@@ -1285,7 +1288,7 @@ p.footnote .fa-square-check {
   width: 19%;
 }
 .rent-battery .five-advantages .advantage p {
-  color: rgba(1, 84, 90, 0.5);
+  color: rgba(253, 1, 1, 0.5);
   font-size: 50px;
   padding: 20px 10px 0 0;
 }
