@@ -64,7 +64,7 @@
 					<div class="action-block" id="action-block">
 					<h4>Аккумуляторные и сетевые поломоечные машины, от 1200м² до 6000м² в час</h4>
 					<a href="#rent-machines" type="button" class="get-more-btn">аренда</a>
-					<a href="#sale" type="button" class="get-more-btn-blue">покупка</a>
+					<a href="#rent-machines" type="button" class="get-more-btn-blue">покупка</a>
 				</div>
 				</div>
 			</div>
@@ -245,7 +245,7 @@
 	<section id="rent-machines" class="rent">
 		<div class="container">
 			<div class="rent-header mt-5">
-				<h1>Поломоечные машины в аренду</h1>
+				<h1>Поломоечные машины</h1>
 			</div>
 			<div class="rent-content">
 			
@@ -771,7 +771,7 @@
 						<div class="rent-battery-item-price">
 							Цена: <b>по запросу</b>
 						</div>
-						<button class="rent-btn">Купить</button>
+						<button class="rent-btn" data-bs-toggle="modal" data-bs-target="#rentModal">Купить</button>
 					</div>
 				</div>
 				<div class="rent-battery-item">
@@ -788,7 +788,7 @@
 						<div class="rent-battery-item-price">
 							Цена: <b>по запросу</b>
 						</div>
-						<button class="rent-btn">Купить</button>
+						<button class="rent-btn" data-bs-toggle="modal" data-bs-target="#rentModal">Купить</button>
 					</div>
 				</div>
 			</div>
@@ -807,7 +807,7 @@
 						<div class="rent-battery-item-price">
 							Цена: <b>по запросу</b>
 						</div>
-						<button class="rent-btn">Купить</button>
+						<button class="rent-btn" data-bs-toggle="modal" data-bs-target="#rentModal">Купить</button>
 					</div>
 				</div>
 				<div class="rent-battery-item">
@@ -824,7 +824,7 @@
 						<div class="rent-battery-item-price">
 							Цена: <b>по запросу</b>
 						</div>
-						<button class="rent-btn">Купить</button>
+						<button class="rent-btn" data-bs-toggle="modal" data-bs-target="#rentModal">Купить</button>
 					</div>
 				</div>
 			</div>
@@ -930,6 +930,9 @@
 					</div>
 					<div class="form-group">
 						<input class="mb-2" type="text" name="Телефон" required="required" placeholder="Ваш номер">
+					</div>
+					<div class="form-group">
+						<input class="mb-2" type="text" name="Ваш e-mail" required="required" placeholder="Ваша почта">
 					</div>
 					<div class="form-footer">
 						<button class="rent-btn mb-3" data-bs-dismiss="modal">Отправить запрос</button>
