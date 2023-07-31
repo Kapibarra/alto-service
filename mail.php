@@ -1,9 +1,9 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Получаем данные из формы
-    $name = $_POST["Имя"];
-    $phone = $_POST["Телефон"];
-    $email = $_POST["Ваш e-mail"];
+    $name = $_POST["name"];
+    $phone = $_POST["phone"];
+    $email = $_POST["email"];
     
     // Формируем сообщение
     $message = "Имя: " . $name . "\n";
@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message .= "E-mail: " . $email . "\n";
     
     // Определяем получателя и тему письма
-    $to = "info@ut-pro.ru"; // Здесь указываем адрес, на который нужно отправить письмо
+    $to = "nmn@madstack.ru"; // Здесь указываем адрес, на который нужно отправить письмо
     $subject = "Обратный звонок";
     
     // Заголовки письма
