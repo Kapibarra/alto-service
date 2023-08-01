@@ -921,7 +921,7 @@
 				<span class="modal-title" id="exampleModalLabel">Оставьте заявку</span>
 				<span type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></span>
 			</div>
-			<form action="mail.php" method="post">
+			<form action="handler.php" method="post">
 				<!-- Hidden Required Fields -->
 				<input type="hidden" name="project_name" value="ГК Альто-Сервис">
 				<input type="hidden" name="admin_email" value="info@ut-pro.ru">
@@ -935,7 +935,7 @@
 						<input class="mb-2" type="text" name="phone" required="required" placeholder="Ваш номер">
 					</div>
 					<div class="form-group">
-						<input class="mb-2" type="text" name="email" required="required" placeholder="Ваша почта">
+						<input class="mb-2" type="email" name="email" required="required" placeholder="Ваша почта">
 					</div>
 					<div class="form-footer">
 						<button class="rent-btn mb-3" data-bs-dismiss="modal" type="submit">Отправить запрос</button>
@@ -955,7 +955,7 @@
 				<span class="modal-title" id="exampleModalLabel">Обратный звонок</span>
 				<span type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></span>
 			</div>
-			<form action="mail.php" method="post">
+			<form action="handler.php" method="post">
 
 				<!-- Hidden Required Fields -->
 				<input type="hidden" name="project_name" value="ГК Альто-Сервис">
@@ -970,7 +970,7 @@
 						<input class="mb-2" type="text" name="phone" required="required" placeholder="Ваш номер">
 					</div>
 					<div class="form-group">
-						<input class="mb-2" type="text" name="email" required="required" placeholder="Ваша почта">
+						<input class="mb-2" type="email" name="email" required="required" placeholder="Ваша почта">
 					</div>
 					<div class="form-footer">
 						<button id="callBack" data-bs-dismiss="modal" class="rent-btn mb-3" type="submit">Перезвоните мне</button>
